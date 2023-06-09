@@ -34,6 +34,7 @@ body{
 
 .layers{
     perspective: 1000px;
+    overflow: hidden;
 }
 
 .layers__container{
@@ -43,13 +44,10 @@ body{
 
 .layers__item{
     position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
+    inset: -7vw;
     background-size: cover;
     background-position: center;
-    transform: rotateX(var(--move-x)) rotateY(var(--move-y));
+    transform: rotateX(var(--move-y)) rotateY(var(--move-x));
 }
 
 
