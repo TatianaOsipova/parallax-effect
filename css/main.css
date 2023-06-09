@@ -4,9 +4,7 @@
     box-sizing: border-box;
 }
 
-:root {
-
-}
+:root {}
 
 @font-face {
     font-family: kamerik-3d;
@@ -19,35 +17,57 @@
     src: url(../fonts/merriweather-regular-italic.woff2);
 }
 
-body{
+body {
     background-color: #000;
     color: #fff;
     font-family: kamerik-3d;
 }
 
-.logo{
+.logo {
     width: 150px;
     height: 150px;
     background-repeat: no-repeat;
     position: absolute;
 }
 
-.layers{
+.layers {
     perspective: 1000px;
     overflow: hidden;
 }
 
-.layers__container{
+.layers__container {
     height: 100vh;
     transform-style: preserve-3d;
+    transform: rotateX(var(--move-y)) rotateY(var(--move-x));
 }
 
-.layers__item{
+.layers__item {
     position: absolute;
     inset: -7vw;
     background-size: cover;
     background-position: center;
-    transform: rotateX(var(--move-y)) rotateY(var(--move-x));
 }
 
+.layer-1 {
+    transform: translateZ(0);
+}
 
+.layer-2 {
+    transform: translateZ(80px);
+}
+
+.layer-3 {
+    transform: translateZ(180px);
+}
+
+.layer-4 {
+    transform: translateZ(190px);
+}
+
+.layer-5 {
+    transform: translateZ(300px);
+}
+
+.layer-6 {
+    transform: translateZ(380px);
+}
